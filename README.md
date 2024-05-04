@@ -13,7 +13,7 @@ To install the application:
 2. Run `cd todo-status-cli` to go to the root directory of the project 
 3. Run `npm install` to install the required dependencies.
 
-## Running the application
+## Running the application in Docker container
 
 To run the application in docker container, use the below command:
 
@@ -33,7 +33,7 @@ This will run the app with custom count of todos
 docker-compose run todo-cli 10
 ```
 
-### Run application locally
+## Run application locally
 prerequisite:
 
 This expects nodejs 20.10.0 to be installed in the local system . or modify the .tool-version file with your installed version.
@@ -58,10 +58,6 @@ To run the tests, use the below command:
 ```
 npm test
 ```
-
-## Main Function
-
-The main function is in the `index.js` file, which is responsible for initiate the fetching and displaying of the todos.
 
 ## Project Structure
 
