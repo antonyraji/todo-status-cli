@@ -1,0 +1,10 @@
+version: '3'
+services:
+  todo-cli:
+    container_name: todo-cli-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node-todos
+    entrypoint: ["npm", "start"]
+    command: ["20"] # Default number of todos to display

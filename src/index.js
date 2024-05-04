@@ -7,9 +7,17 @@ const { displayTodo } = require("./utils/printer");
 
 async function main() {
   try {
-    const evenNumberedTodos = await getEvenNumberedTodos(20);
+    // Reading command-line argument (first arg)
+    const numberOfTodos = parseInt(process.argv[2]);
 
-    evenNumberedTodos.map((todo, index) => {
+    if (isNaN(numberOfTodos) || numberOfTodos <= 0) {
+      console.error("Please provide a valid number of todos.");
+      return;
+    }
+
+    const evenNumberedTodos = await getEvenNumberedTodos(numberOfTodos);
+
+    evenNumberedTodos.forEach((todo, index) => {
       displayTodo(todo, index);
     });
   } catch (error) {
